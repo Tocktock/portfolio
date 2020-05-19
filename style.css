@@ -108,6 +108,7 @@ button {
 #navbar.navbar--dark {
   background-color: var(--color-dark-blue);
   padding: 8px;
+  z-index: 1;
 }
 
 .navbar__toggle-btn {
@@ -413,4 +414,23 @@ button {
   .project {
     flex-grow: 1;
   }
+}
+
+/* Arrow up */
+
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  width: 70px;
+  height: 70px;
+  right: 50px;
+  font-size: 50px;
+  color: var(--color-white);
+  background-color: var(--color-pink);
+  border-radius: 50%;
+  display: none;
+}
+
+.arrow-up.visible {
+  display: block;
 }
