@@ -94,12 +94,20 @@ button {
 /* Navbar */
 
 #navbar {
+  width: 100%;
+  position: fixed;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-background);
+  background-color: transparent;
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-dark-blue);
+  padding: 8px;
 }
 
 .navbar__toggle-btn {
@@ -144,6 +152,7 @@ button {
   background-size: cover;
   text-align: center;
   padding: 40px;
+  padding-top: 100px;
 }
 .home__avatar {
   width: 250px;
