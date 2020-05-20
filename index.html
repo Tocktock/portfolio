@@ -29,7 +29,7 @@
       </div>
       <div class="navbar__menu">
         <ul class="navbar__menu">
-          <li class="navbar__menu__item active" data-link="#home">Home</li>
+          <li class="navbar__menu__item" data-link="#home">Home</li>
           <li class="navbar__menu__item" data-link="#about">About</li>
           <li class="navbar__menu__item" data-link="#skills">Skills</li>
           <li class="navbar__menu__item" data-link="#work">My Work</li>
@@ -43,7 +43,6 @@
     <!-- Home -->
     <section id="home">
       <div class="home__container">
-
         <img src="imgs/profile.png" alt="JiYoung profile photo" class="home__avatar">
         <h1 class="home__title"> Hello I'm dreamer</h1>
         <h2 class="home__description"> Every challenge will make me stronger </h2>
@@ -142,13 +141,15 @@
     <section id="work" class="section">
       <h1> My Work </h1>
       <h3> This is My work list, Click will lead you into spec.  </h3>
-      <div class="work__category">
-        <button class="category__btn">Web</button>
-        <button class="category__btn">Mini</button>
+      <div class="work__categories">
+        <button class="category__btn selected" data-filter="*">All</button>
+        <button class="category__btn" data-filter="web">Web</button>
+        <button class="category__btn" data-filter="mobile">Mobile</button>
+        <button class="category__btn" data-filter="mini">Mini</button>
       </div>
 
       <div class="work__projects">
-        <a href="#proeject_1" class="project" target_blank>
+        <a href="#proeject_1" class="project" target="_blank" data-type="mini">
           <!-- 블라블라 + 이미지, 설명 필요 -->
           <img src="/imgs/manyangcloud.png" alt="some project" class="project__img">
            <div class="project__description">
@@ -156,11 +157,11 @@
             <span> 스판설명적으시옹~</span>
           </div>
         </a>
-        <a href="#proeject_2" class="project" target_blank>
+        <a href="#proeject_2" class="project" target="_blank" data-type="web">
           <!-- 블라블라 + 이미지, 설명 필요 -->
           <img src="/imgs/manyangcloud.png" alt="some project" class="project__img">
           <div class="project__description">
-            <h3>Manyangcloud</h3>
+            <h3>에어비엔비클론여기</h3>
             <span> 스판설명적으시옹~</span>
           </div>
         </a>

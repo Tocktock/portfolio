@@ -20,32 +20,66 @@ navbarMenu.addEventListener("click", (e) => {
   if (link == null) {
     return;
   }
-  const scrollTo = document.querySelector(link);
-  scrollIntoView(scrollTo);
+  scrollIntoView(link);
 });
 
 // Handle click on "contact me" button on home
 
 function scrollIntoView(selector) {
   console.log(selector);
-  selector.scrollIntoView({ behavior: "smooth" });
+  const target = document.querySelector(selector);
+  target.scrollIntoView({ behavior: "smooth" });
 }
 
 const homeContactBtn = document.querySelector(".home__contact");
-homeContactBtn.addEventListener(
-  "click",
-  scrollIntoView.bind(this, document.querySelector("#contact"))
-);
+homeContactBtn.addEventListener("click", scrollIntoView.bind(this, "#contact"));
 // Make home slowly fade to transparent as the window scrolls down
 
-const home = document.querySelector(".home__container");
-const homeHeight = home.getBoundingClientRect().height;
+const homeContainer = document.querySelector(".home__container");
+const homeHeight = homeContainer.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
-  home.style.opacity = 1 - window.scrollY / homeHeight;
+  homeContainer.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
-// Show arrow up button when scrolling down
+// Show arrow up button when scrolling down'
+const arrowUp = document.querySelector(".arrow-up");
 document.addEventListener("scroll", () => {
-  if (window.scrollY > homeHe) {
+  if (window.scrollY > homeHeight) {
+    arrowUp.classList.add("visible");
+  } else {
+    arrowUp.classList.remove("visible");
   }
 });
+
+arrowUp.addEventListener("click", scrollIntoView.bind(this, "#home"));
+
+// Projects
+const workBtnContainer = document.querySelector(".work__categories");
+const projectContainer = document.querySelector(".work__projects");
+const projects = document.querySelectorAll(".project");
+workBtnContainer.addEventListener("click", (e) => {
+  const filter = e.target.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+
+  const active = document.querySelector(".category__btn.selected");
+  if (active != null) {
+    active.classList.remove("selected");
+  }
+  e.target.classList.add("selected");
+  projectContainer.classList.add("anim-out");
+
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (filter === "*" || filter === project.dataset.type) {
+        project.classList.remove("invisible");
+      } else {
+        project.classList.add("invisible");
+      }
+    });
+    projectContainer.classList.remove("anim-out");
+  }, 300);
+});
+
+// Remove navbar selection from the previous item and select current item
