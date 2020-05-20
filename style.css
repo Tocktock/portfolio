@@ -148,7 +148,7 @@ button {
   font-weight: var(--weight-semi-bold);
 }
 #home {
-  background: url("imgs/C L O U D.png");
+  background: url("imgs/background_cloud.png");
   background-size: cover;
   text-align: center;
   padding: 40px;
@@ -241,7 +241,7 @@ button {
   border-radius: 5px;
 }
 .skill {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .skillset__title {
@@ -385,6 +385,7 @@ button {
 
 .contact__title,
 .contact__email,
+.contact__cellphone,
 .contact__rights {
   color: var(--color-white);
 }
@@ -438,15 +439,16 @@ button {
   .navbar__toggle-btn {
     display: block;
   }
+
+  #navbar.navbar--dark {
+    padding: 16px;
+  }
   #navbar {
     flex-direction: column;
     align-items: flex-start;
     background-color: var(--color-dark-blue);
   }
 
-  #navbar.navbar--dark {
-    padding: 16px;
-  }
   .navbar__menu {
     flex-direction: column;
     text-align: center;
