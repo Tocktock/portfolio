@@ -1,8 +1,13 @@
 "use strict";
+import Project from "./src/project.js";
 
 // Make Navbar transparent when it is on the top
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
+
+const alpha = new Project(".work__projects");
+
+alpha.fetchProject();
 
 document.addEventListener("scroll", () => {
   if (navbarHeight < window.scrollY) {
@@ -59,34 +64,5 @@ document.addEventListener("scroll", () => {
 });
 
 arrowUp.addEventListener("click", scrollIntoView.bind(this, "#home"));
-
-// Projects
-const workBtnContainer = document.querySelector(".work__categories");
-const projectContainer = document.querySelector(".work__projects");
-const projects = document.querySelectorAll(".project");
-workBtnContainer.addEventListener("click", (e) => {
-  const filter = e.target.dataset.filter;
-  if (filter == null) {
-    return;
-  }
-
-  const active = document.querySelector(".category__btn.selected");
-  if (active != null) {
-    active.classList.remove("selected");
-  }
-  e.target.classList.add("selected");
-  projectContainer.classList.add("anim-out");
-
-  setTimeout(() => {
-    projects.forEach((project) => {
-      if (filter === "*" || filter === project.dataset.type) {
-        project.classList.remove("invisible");
-      } else {
-        project.classList.add("invisible");
-      }
-    });
-    projectContainer.classList.remove("anim-out");
-  }, 300);
-});
 
 // Remove navbar selection from the previous item and select current item
