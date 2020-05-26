@@ -1,13 +1,16 @@
 "use strict";
-import Project from "./src/project.js";
+import Project from "./src/Project.js";
+import Skill from "./src/skills.js";
 
 // Make Navbar transparent when it is on the top
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
 
-const alpha = new Project(".work__projects");
+const project = new Project(".work__projects");
+project.fetchData("../resources/projects.json");
 
-alpha.fetchProject();
+const skill = new Skill(".skillset__left");
+skill.fetchData("../resources/skills.json");
 
 document.addEventListener("scroll", () => {
   if (navbarHeight < window.scrollY) {

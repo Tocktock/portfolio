@@ -13,7 +13,8 @@
       },
       "comment": "udemy 의 수업 중 golang 을 이용한 풀스택 개발과정을 수강하며, 만든 간단한 Single Page Appilcation 이며 웹의 전반적인 부분을 이해하는데 큰 도움이 됨.",
       "link": "https://manyangcloud.com",
-      "imgSrc": "imgs/project1_web.png"
+      "imgSrc": "imgs/project1_web.png",
+      "github" : ""
     },
     {
       "type": "web",
