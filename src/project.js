@@ -15,11 +15,41 @@ class Project extends Compo {
   updateCompo() {
     this.divTemplate = projectTemplate;
     this.data = this.json.project;
+    this.addEvent = this.addCategoryChangeListener;
     this.showCompo();
+  }
+  addCategoryChangeListener() {
+    const workBtnContainer = document.querySelector(".work__categories");
+    const projectContainer = document.querySelector(".work__projects");
+    const projects = document.querySelectorAll(".project");
+    workBtnContainer.addEventListener("click", (e) => {
+      const filter = e.target.dataset.filter;
+      if (filter == null) {
+        return;
+      }
+      const active = document.querySelector(".category__btn.selected");
+      if (active != null) {
+        active.classList.remove("selected");
+      }
+      e.target.classList.add("selected");
+      projectContainer.classList.add("anim-out");
+
+      setTimeout(() => {
+        projects.forEach((project) => {
+          if (filter === "*" || filter === project.dataset.type) {
+            project.classList.remove("invisible");
+          } else {
+            project.classList.add("invisible");
+          }
+        });
+        projectContainer.classList.remove("anim-out");
+      }, 300);
+    });
   }
 }
 
 export default Project;
+
 // // 프로젝트 누르면 간단한 설명 나오게.
 // const projectModalTemplate = (project) => `
 
