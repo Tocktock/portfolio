@@ -18,7 +18,7 @@ const home = new Home("#home");
 home.display();
 
 const about = new About("#about");
-about.fetchData("/resources/about.json").then(() => {
+about.fetchData("./resources/about.json").then(() => {
   console.log(about.json);
   about.display();
 });
@@ -26,7 +26,7 @@ about.fetchData("/resources/about.json").then(() => {
 const modal = new Modal("#modal");
 const projectModal = new ProjectModal();
 const project = new Project(".work__projects");
-project.fetchData("/resources/projects.json").then(() => {
+project.fetchData("./resources/projects.json").then(() => {
   projectModal.setData(project.getData());
 
   const projects = document.querySelectorAll(".project");
@@ -40,7 +40,7 @@ project.fetchData("/resources/projects.json").then(() => {
 });
 
 const skill = new Skills_left(".skillset__left");
-skill.fetchData("/resources/skills.json");
+skill.fetchData("./resources/skills.json");
 
 document.addEventListener("scroll", () => {
   if (navbarHeight < window.scrollY) {
