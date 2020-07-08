@@ -1,15 +1,45 @@
 "use strict";
 import Project from "./src/Project.js";
-import Skill from "./src/skills.js";
+import Skills_left from "./src/Skills_left.js";
+import Navbar from "./src/Navbar.js";
+import Home from "./src/Home.js";
+import About from "./src/About.js";
+import Modal from "./src/Modal.js";
+import ProjectModal from "./src/ProjectModal.js";
 
 // Make Navbar transparent when it is on the top
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
 
-const project = new Project(".work__projects");
-project.fetchData("../resources/projects.json");
+const navbar_t = new Navbar("#navbar");
+navbar_t.display();
 
-const skill = new Skill(".skillset__left");
+const home = new Home("#home");
+home.display();
+
+const about = new About("#about");
+about.fetchData("../resources/about.json").then(() => {
+  console.log(about.json);
+  about.display();
+});
+
+const modal = new Modal("#modal");
+const projectModal = new ProjectModal();
+const project = new Project(".work__projects");
+project.fetchData("../resources/projects.json").then(() => {
+  projectModal.setData(project.getData());
+
+  const projects = document.querySelectorAll(".project");
+  projects.forEach((element) => {
+    element.addEventListener("click", () => {
+      const modalId = element.dataset.id;
+      modal.modalUpdate(projectModal.getData(modalId));
+      modal.toggleEvent();
+    });
+  });
+});
+
+const skill = new Skills_left(".skillset__left");
 skill.fetchData("../resources/skills.json");
 
 document.addEventListener("scroll", () => {

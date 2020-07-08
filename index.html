@@ -23,7 +23,7 @@
   <body>
     <!-- Navbar -->
     <nav id="navbar">
-      <div class="navbar__logo">
+      <!-- <div class="navbar__logo">
         <img src="imgs/myicon.png"></img>
         <a href="#">JiYoung</a>
       </div>
@@ -36,63 +36,38 @@
         </ul>
       <button class="navbar__toggle-btn">
         <i class="fas fa-hamburger"></i>
-      </button>
+      </button> -->
     </nav>
     <!-- Home -->
     <section id="home">
-      <div class="home__container">
-        <img src="imgs/profile.png" alt="JiYoung profile photo" class="home__avatar">
-        <h1 class="home__title"> Hello I'm dreamer</h1>
-        <h2 class="home__description"> Software Engineer currently developing web </h2>
-        <button class="home__contact"> Contact Me</button>
-      </div>
+      <!-- <div class="home__container">
+        <img
+          src="imgs/profile.png"
+          alt="JiYoung profile photo"
+          class="home__avatar"
+        />
+        <h1 class="home__title">Hello I'm dreamer</h1>
+        <h2 class="home__description">
+          Software Engineer currently developing web
+        </h2>
+        <button class="home__contact">Contact Me</button>
+      </div> -->
     </section>
     <!-- About -->
-    <section id="about" class="section section__container">
-      <h1> About Me</h1>
-      <p>
-        <!-- 간략설명, 기타 설명 필요.  -->
-        웹 개발이라는 분야에 흥미를 가지고 프론트엔드, 백엔드 가리지 않고 필요한 기술을 배워나가고 있습니다. <br/>개발경력이 길지는 않지만 빠르게 성장해나가는 모습을 보여드리겠습니다.
-        
-      </p>
-      <div class="about__majors">
-          <div class="major">
-              <div class="major__icon">
-                <i class="fab fa-html5"></i>
-              </div>
-              <h2 class="major__title">
-                  Front-end
-              </h2>
-              <div class="major__description">
-                HTML, CSS, Javascript, React, Web APIs
-              </div>
-          </div>
-          <div class="major">
-              <div class="major__icon">
-                <i class="fas fa-server"></i>
-              </div>
-              <h2 class="major__title">
-                  Back-end
-              </h2>
-              <div class="major__description">
-                Python Django, Go, C++, Javascript, NodeJS, rest APIs, Nginx
-              </div>
-          </div>
-      </div>
-      <div class="about__project">
-          <p class="project__name"></p>
-          <p class="project__period"></p>
-          <a href="#" class="project__link"></a>
-      </div>
-    </section>
+    <section id="about" class="section section__container"></section>
     <!-- skills -->
     <section id="skills" class="section">
       <div class="section__container">
         <h1>Skills</h1>
         <h2>Skills & Attributes</h2>
-        <p> 교과 과정에서는 집중적으로 C++를 이용한 알고리즘 관련 공부를 했으나, <br/> 이후 Web 개발에 집중하여 다양한 언어를 습득해나가고 있습니다. </p>
+        <p>
+          교과 과정에서는 집중적으로 C++를 이용한 알고리즘 관련 공부를 했으나,
+          <br />
+          이후 Web 개발에 집중하여 다양한 언어를 습득해나가고 있습니다.
+        </p>
         <div class="skillset">
           <div class="skillset__left">
+            <!-- skill.js -->
             <h3 class="skillset__title">Skills</h3>
           </div>
           <div class="skillset__right">
@@ -114,12 +89,11 @@
           </div>
         </div>
       </div>
-     
     </section>
     <!-- work -->
     <section id="work" class="section">
-      <h1> My Work </h1>
-      <h3> 프로젝트 리스트입니다. 클릭하시면 해당 사이트로 이동됩니다.  </h3>
+      <h1>My Work</h1>
+      <h3>프로젝트 리스트입니다. 클릭하시면 해당 사이트로 이동됩니다.</h3>
       <div class="work__categories">
         <button class="category__btn selected" data-filter="*">All</button>
         <button class="category__btn" data-filter="web">Web</button>
@@ -148,7 +122,11 @@
     <button class="arrow-up">
       <i class="fas fa-arrow-up"></i>
     </button>
+    <!-- modal -->
+    <div id="modal">
+      <div class="modal__container"></div>
+    </div>
   </body>
-  
+
   <script src="main.js" type="module"></script>
 </html>

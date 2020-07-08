@@ -1,69 +1,63 @@
 {
   "project": [
     {
+      "id": 0,
       "type": "web",
-      "name": "manyangcloud",
+      "name": "Manyangloud",
       "period": "2020-04-06 ~ 2020-05-04",
-      "use-stack": {
-        "nginx": "AWS lightsail instance를 이용하여 nginx 서버를 사용",
-        "golang": "backend 의 request와 response 등을 처리하기 위해 golang을 사용",
-        "react": "frontend 를 구성하기 위해 사용",
-        "mongodb": "userdata를 저장하기 위해 사용",
-        "etc": "redis 와 mysql 을 체험해보기 위해 간단히 사용"
-      },
-      "comment": "udemy 의 수업 중 golang 을 이용한 풀스택 개발과정을 수강하며, 만든 간단한 Single Page Appilcation 이며 웹의 전반적인 부분을 이해하는데 큰 도움이 됨.",
+      "useStack": [
+        "FrontEnd : React, Parcel",
+        "Backend : Golang, Mongodb, Nginx"
+      ],
+      "description": "ManyangCloud 는 FileSystem 과 보안 관련 기능을 실습해보기 위해 제작한 사이트 입니다. Udemy에서의 강의를 참고하여 만들었으며 Golang Gorilla Websocket, Nginx, Mongodb 를 이용하여 서버를 구축하였고 React로 표현하였습니다.",
       "link": "https://manyangcloud.com",
       "imgSrc": "imgs/project1_web.png",
-      "github" : ""
+      "github": "https://github.com/Tocktock/airbnb-clone"
     },
     {
+      "id": 1,
       "type": "web",
       "name": "airbnb-clone",
       "period": "2019-12-06 ~ 2020-02-10",
-      "use-stack": {
-        "python": "Python 웹 프레임워크인 Django를 이용하여 만든 airbnb clone 사이트이며 간단하고 강력한 기능을 원했기 때문에 Flask가 아닌 Django를 이용함",
-        "tailwind": "전반적인 태그들의 스타일링은 tailwind CSS 를 사용하여 만듬"
-      },
-      "comment": "Django 이용하여 airbnb 의 기본적인 기능을 구현한 사이트로 oauth, signup, login, email 기능 등 다양한 기능을 체험해볼 수 있는 프로젝트 였으며, AWS Elastic Beanstalk 을 통해 배포되었음.",
+      "useStack": ["FrontEnd : tailwind", "Backend : python Django"],
+      "description": "Airbnb 의 전반적인 CRUD  기능들을 배우기 위해 제작한 사이트 입니다. AWS EC2를 통해 배포되었으며, Python Django 를 통해 백엔드를 구축하였으며, TailwindCSS 를 통해 스타일링 하였습니다.",
       "link": "http://airbnb-clone.xvuzexi3fp.ap-northeast-2.elasticbeanstalk.com/",
-      "imgSrc": "imgs/project2_web.png"
+      "imgSrc": "imgs/project2_web.png",
+      "github": "https://github.com/Tocktock/airbnb-clone"
     },
     {
+      "id": 2,
       "type": "mini",
       "name": "영화 MVC",
       "period": "2019-01-31 ~ 2020-02-02",
-      "use-stack": {
-        "react": "frontend를 구성하기 위해 사용",
-        "VanillaJS": "바닐라 JS 기능을 공부하기 위해 사용"
-      },
-      "comment": "react를 공부하기 위해 만든 간단한 MVC 모델",
+      "useStack": ["FrontEnd : React"],
+      "description": "영화 MVC 는 React 를 연습하고, Javascript의 기본적인 기능을 실습하기 위해 만들어진 사이트 입니다. React를 통해 표현되었습니다.",
       "link": "https://tocktock.github.io/movie-app/#/",
-      "imgSrc": "imgs/project3_mini.png"
+      "imgSrc": "imgs/project3_mini.png",
+      "gitgub": ""
     },
     {
+      "id": 3,
       "type": "mini",
       "name": "paintJS",
       "period": "2019-05-13 ~ 2020-05-14",
-      "use-stack": {
-        "react": "frontend를 구성하기 위해 사용",
-        "VanillaJS": "바닐라 JS 기능을 공부하기 위해 사용"
-      },
-      "comment": "VanillaJS를 공부하기 위해 진행했던 미니 프로젝트",
-      "link": "https://tocktock.github.io/movie-app/#/",
-      "imgSrc": "imgs/project4_mini.png"
+      "useStack": ["FrontEnd : Vanilla JS"],
+      "description": "PaintJS 페이지는 Vanllia JS 를 배우고, 간단하게 그림을 그려보는 캔버스를 사용하기 위해 만든 사이트 입니다. Vanilla JS를 통해 구축하였습니다.",
+      "link": "https://tocktock.github.io/paintjs/",
+      "imgSrc": "imgs/project4_mini.png",
+      "gitgub": ""
     },
 
     {
+      "id": 4,
       "type": "mini",
-      "name": "MVC 컴포넌트 연습",
+      "name": "MVC Component",
       "period": "2019-05-15 ~ 2020-05-15",
-      "use-stack": {
-        "react": "frontend를 구성하기 위해 사용",
-        "VanillaJS": "바닐라 JS 기능을 공부하기 위해 사용"
-      },
-      "comment": "VanillaJS 의 앱구조를 공부하기 위해 진행했던 프로젝트",
+      "useStack": ["FrontEnd : Vanilla JS"],
+      "description": "MVC Component 사이트는 ManyangCloud 글자를 클릭하면 데이터를 로딩하는 사이트 입니다. 유튜브에서 재미있어 보이는 클론 영상이 있어 따라해보았습니다. Vanilla JS 를 통해 구현하였습니다.",
       "link": "https://tocktock.github.io/VanillaJS-MVC/",
-      "imgSrc": "imgs/project5_mini.png"
+      "imgSrc": "imgs/project5_mini.png",
+      "gitgub": ""
     }
   ]
 }

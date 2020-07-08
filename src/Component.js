@@ -1,19 +1,20 @@
-class Compo {
+import Loader from "./Loader.js";
+
+class Component extends Loader {
   constructor(selector) {
+    super();
     this.target = document.querySelector(selector);
   }
 
   async fetchData(path) {
-    this.json = await fetch(`${path}`).then(function (response) {
-      return response.json();
+    await super.fetchData(path).then(() => {
+      if (this.updateComponent != null) {
+        this.updateComponent();
+      }
     });
-    console.log(this.json);
-    if (this.updateCompo != null) {
-      this.updateCompo();
-    }
   }
 
-  showCompo() {
+  display() {
     if (this.divTemplate != null) {
       this.data.map((v) => {
         const newdiv = document.createElement("div");
@@ -26,4 +27,4 @@ class Compo {
     }
   }
 }
-export default Compo;
+export default Component;

@@ -1,4 +1,4 @@
-import Compo from "./Compo.js";
+import Component from "./Component.js";
 
 const skillTemplate = (skill) =>
   `        
@@ -13,12 +13,12 @@ const skillTemplate = (skill) =>
 </div>
 `;
 
-class Skill extends Compo {
-  updateCompo() {
+class Skills_left extends Component {
+  updateComponent() {
     this.divTemplate = skillTemplate;
     this.data = this.json.skills;
-    this.showCompo();
+    this.display();
   }
 }
 
-export default Skill;
+export default Skills_left;

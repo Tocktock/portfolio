@@ -90,6 +90,17 @@ button {
   border: none;
   outline: none;
 }
+/* hidden and animation */
+
+.whyWebText {
+  overflow: hidden;
+  height: 0px;
+  transition: all var(--animation-duration) ease-in;
+}
+.whyWebText.open {
+  height: 400px;
+  transition: all var(--animation-duration) ease-in;
+}
 
 /* Navbar */
 
@@ -224,7 +235,13 @@ button {
 .job {
   display: flex;
 }
+.whyWebText {
+  text-align: left;
+}
 
+#about__whyWeb {
+  cursor: pointer;
+}
 /*  Skill */
 #skills {
   background-color: var(--color-yellow);
@@ -311,6 +328,7 @@ button {
 }
 
 .project {
+  cursor: pointer;
   position: relative;
   width: 320px;
   height: 250px;
@@ -498,4 +516,95 @@ button {
     right: 16px;
     font-size: var(--font-medium);
   }
+}
+
+/* Modal */
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  background-color: rgba(41, 48, 59, 0.8);
+}
+
+#modal .modal__container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 6px;
+  background: #fff;
+  color: #29303b;
+  width: 500px;
+  height: 600px;
+
+  box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1),
+    0 3px 1px 0 rgba(20, 23, 28, 0.1);
+}
+
+.modal__container .modal__head {
+  height: 10%;
+  text-align: center;
+  margin: 8px;
+  border-bottom: 1px solid pink;
+}
+
+.modal__container .modal__techStack {
+  height: 10%;
+  text-align: center;
+  border-bottom: 1px solid pink;
+}
+
+.modal__container h5 {
+  margin: 5px;
+}
+
+.modal__container .modal__description {
+  width: 80%;
+  height: 15%;
+  text-align: left;
+  margin: 20px auto;
+}
+
+.modal__container .modal__watch {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.modal__container .modal__picture {
+  margin: 5px;
+}
+.modal__techStack span {
+  font-size: var(--font-micro);
+  margin: auto;
+}
+
+.modal__description span {
+  margin-top: 10px;
+  font-size: var(--font-small);
+}
+.modal__picture {
+  width: 480px;
+  height: 300px;
+}
+.modal__picture a {
+  margin: 5px;
+  border: 1px solid gray;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.modal__picture img {
+  max-width: 100%;
+  max-height: 100%;
 }
