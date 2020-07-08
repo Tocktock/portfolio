@@ -51,7 +51,10 @@ class About extends Component {
     const whyWebIcon = document.querySelector("#about__whyWebIcon");
     const whyWebText = document.querySelector("#about__whyWebText");
 
-    whyWeb.addEventListener("click", () => whyWebText.classList.toggle("open"));
+    whyWeb.addEventListener("click", () => {
+      whyWebText.scrollIntoView({ behavior: "smooth", block: "center" });
+      whyWebText.classList.toggle("open");
+    });
   }
 }
 

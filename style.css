@@ -404,7 +404,8 @@ button {
 .contact__title,
 .contact__email,
 .contact__cellphone,
-.contact__rights {
+.contact__rights,
+.contact__github {
   color: var(--color-white);
 }
 
