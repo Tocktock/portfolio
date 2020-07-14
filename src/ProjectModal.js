@@ -13,7 +13,7 @@ const projectModalTemplate = (project) =>
     </div>
     <div class="modal__watch">click<i class="fas fa-arrow-down"></i></div>
     <div class="modal__picture">
-      <a href=${project.link}> <img src=${project.imgSrc} alt=${
+      <a target=_blank href=${project.link}> <img src=${project.imgSrc} alt=${
     project.name
   } /></a>
     </div>
