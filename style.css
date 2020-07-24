@@ -413,17 +413,21 @@ button {
   margin: 32px 0;
 }
 
-.contact__links {
+.contact__links,
+.contact__hidden {
   font-size: var(--font-large);
   margin: 24px 0;
 }
 
-.contact__links i:hover {
+.contact__links i:hover,
+.contact__hidden i:hover {
   transform: scale(1.2);
   color: var(--color-yellow);
   transition: all var(--animation-duration) ease-in;
 }
-
+.contact__hidden {
+  display: inline-block;
+}
 /* Arrow up */
 
 .arrow-up {
@@ -608,4 +612,26 @@ button {
 .modal__picture img {
   max-width: 100%;
   max-height: 100%;
+}
+
+/* secret */
+
+.secret {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  bottom: 10px;
+}
+.secret__container {
+  border-radius: 25px;
+  padding: 10px;
+  background-color: white;
+}
+.secret__title {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.secret__a {
+  color: black;
 }

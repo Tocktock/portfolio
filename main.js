@@ -78,6 +78,21 @@ function scrollIntoView(selector) {
 
 const homeContactBtn = document.querySelector(".home__contact");
 homeContactBtn.addEventListener("click", scrollIntoView.bind(this, "#contact"));
+
+//  coontact Secret page up
+
+const contactSecret = document.querySelector(".contact__hidden");
+
+const secretContainer = document.querySelector(".secret");
+const secretPos = contactSecret.getBoundingClientRect();
+secretContainer.style.left = secretPos.right + 150 + "px";
+
+contactSecret.addEventListener("mouseover", (e) => {
+  secretContainer.style.display = "block";
+});
+contactSecret.addEventListener("mouseout", (e) => {
+  secretContainer.style.display = "none";
+});
 // Make home slowly fade to transparent as the window scrolls down
 
 const homeContainer = document.querySelector(".home__container");
