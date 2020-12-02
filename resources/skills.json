@@ -2,15 +2,15 @@
   "skills": [
     {
       "skill": "HTML",
-      "mastery": "90"
+      "mastery": "80"
     },
     {
       "skill": "Python",
-      "mastery": "70"
+      "mastery": "50"
     },
     {
       "skill": "Javascript",
-      "mastery": "80"
+      "mastery": "70"
     },
     {
       "skill": "Golang",
@@ -18,11 +18,7 @@
     },
     {
       "skill": "C++",
-      "mastery": "80"
-    },
-    {
-      "skill": "React",
-      "mastery": "70"
+      "mastery": "50"
     }
   ]
 }

@@ -1,6 +1,9 @@
 {
   "skills": [
-    { "skill": "Visual Studio Code" },
-    { "skill": "Database control tools" }
+    { "skill": "React" },
+    { "skill": "Next.js" },
+    { "skill": "Elasticsearch" },
+    { "skill": "Django" },
+    { "skill": "GoGin" }    
   ]
 }
