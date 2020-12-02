@@ -3,7 +3,6 @@ class Loader {
     this.json = await fetch(`${path}`).then(function (response) {
       return response.json();
     });
-    console.log(this.json);
   }
 }
 

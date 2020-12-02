@@ -1,5 +1,3 @@
-import Loader from "./Loader.js";
-
 const projectModalTemplate = (project) =>
   `
     <div class="modal__head">

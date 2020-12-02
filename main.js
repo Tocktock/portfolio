@@ -6,6 +6,7 @@ import Home from "./src/Home.js";
 import About from "./src/About.js";
 import Modal from "./src/Modal.js";
 import ProjectModal from "./src/ProjectModal.js";
+import Skills_framework from "./src/Skills_framework.js"
 
 // Make Navbar transparent when it is on the top
 const navbar = document.querySelector("#navbar");
@@ -19,7 +20,6 @@ home.display();
 
 const about = new About("#about");
 about.fetchData("./resources/about.json").then(() => {
-  console.log(about.json);
   about.display();
 });
 
@@ -41,6 +41,13 @@ project.fetchData("./resources/projects.json").then(() => {
 
 const skill = new Skills_left(".skillset__left");
 skill.fetchData("./resources/skills.json");
+
+const skillFramework = new Skills_framework(".framework__list");
+skillFramework.fetchData("./resources/skills_framework.json")
+
+const skillEtc = new Skills_framework(".etc__list");
+skillEtc.fetchData("./resources/skills_etc.json")
+
 
 document.addEventListener("scroll", () => {
   if (navbarHeight < window.scrollY) {
@@ -64,14 +71,12 @@ navbarMenu.addEventListener("click", (e) => {
 // Navbar toggle btn for small screen
 const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
 navbarToggleBtn.addEventListener("click", () => {
-  console.log("afd");
   navbarMenu.classList.toggle("open");
 });
 
 // Handle click on "contact me" button on home
 
 function scrollIntoView(selector) {
-  console.log(selector);
   const target = document.querySelector(selector);
   target.scrollIntoView({ behavior: "smooth" });
 }
@@ -81,18 +86,7 @@ homeContactBtn.addEventListener("click", scrollIntoView.bind(this, "#contact"));
 
 //  coontact Secret page up
 
-const contactSecret = document.querySelector(".contact__hidden");
 
-const secretContainer = document.querySelector(".secret");
-const secretPos = contactSecret.getBoundingClientRect();
-secretContainer.style.left = secretPos.right + 150 + "px";
-
-contactSecret.addEventListener("mouseover", (e) => {
-  secretContainer.style.display = "block";
-});
-contactSecret.addEventListener("mouseout", (e) => {
-  secretContainer.style.display = "none";
-});
 // Make home slowly fade to transparent as the window scrolls down
 
 const homeContainer = document.querySelector(".home__container");
